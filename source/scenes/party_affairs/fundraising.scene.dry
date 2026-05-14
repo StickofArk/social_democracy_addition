@@ -14,6 +14,7 @@ For better or for worse, the party cannot exist without money.
 - @maintain: Maintain our current dues.
 - @reduce: Reduce dues.
 - @increase: Increase dues.
+- @delegate: Let the party handle it for 5 years.
 
 @maintain
 subtitle: [+ dues +] resources gained.
@@ -36,4 +37,11 @@ view-if: dues <= 4
 Our members grumble at this, and some of the less committed members leave. But now, we have access to additional resources. 
 
 [? if unemployed >= 15 : Because of the presently high unemployment, our members are feeling the extra burden hard. ?]
+
+@delegate
+subtitle: [ + dues + ] resources gained.
+on-arrival: resources += dues; left_dissent -= 5; center_dissent -= 5; reformist_dissent -= 5; labor_dissent -= 5; fundraising_timer = 30
+
+Our decision pleases the party and gives us passive revenue, but we lose access to fundraise ourselves.
+
 
