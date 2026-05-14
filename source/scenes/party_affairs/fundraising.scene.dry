@@ -39,9 +39,9 @@ Our members grumble at this, and some of the less committed members leave. But n
 [? if unemployed >= 15 : Because of the presently high unemployment, our members are feeling the extra burden hard. ?]
 
 @delegate
-subtitle: [ + dues + ] resources gained.
+subtitle: [+ dues +] resources gained.
 on-arrival: resources += dues; left_dissent -= 5; center_dissent -= 5; reformist_dissent -= 5; labor_dissent -= 5; fundraising_timer = 30
 
-Our decision pleases the party and gives us passive revenue, but we lose access to fundraise ourselves.
+Our decision pleases the party, but we lose access to fundraise ourselves.
 
 
