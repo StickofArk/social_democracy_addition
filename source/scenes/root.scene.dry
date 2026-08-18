@@ -236,7 +236,7 @@ Q.parties = ['spd', 'left', 'epp', 'green', 'renew', 'esn', 'acc', 'other'];
 Q.sapd_formed = 0;
 
 // Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normaliepped.
+// they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 55;
 Q.workers_left = 20;
 Q.workers_epp = 5;
@@ -336,7 +336,7 @@ Q.economic_records = [];
 Q.president = "Hindenburg";
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
-Q.chancellor_party = 'epp';
+Q.chancellor_party = 'EPP';
 Q.spd_in_government = 0;
 Q.epp_in_government = 1;
 Q.green_in_government = 0;
@@ -540,7 +540,7 @@ Q.march_on_berlin_timer = 0;
 Q.wels_advisor = 1; // Otto Wels
 Q.muller_advisor = 1; // Hermann Müller
 Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him... Except that he was a close friend of Luxemburg and co-led the USPD????? (What am I writing, I'll be deleting all of these leaders for new guys)
+// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 1; // Rudolf Hilferding
 
