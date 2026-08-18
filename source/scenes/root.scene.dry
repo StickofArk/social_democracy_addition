@@ -76,11 +76,11 @@ Q.nazi_urgency = 0;
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
+// Support for Pacifism within the SPD relative to 2068
 Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
+// Support for democratic reform within the SPD relative to 2068
 Q.democratization = 0;
-// Support for a communist coalition relative to 1928
+// Support for a communist coalition relative to 2068
 Q.communist_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
@@ -113,7 +113,7 @@ Q.left_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.left_party_leader = "Thälmann";
 Q.epp_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
+// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 2068 December conference. Joos will be most friendly to the SPD.
 Q.epp_party_leader = "Marx";
 Q.acc_leader = "Hitler";
 
@@ -129,7 +129,7 @@ Q.spd_prussia = 1;
 Q.european_government = "SPD";
 
 // The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
+// Number of members in 2068 (in thousands)
 // Popular Front, Restoration League, Court of the Seven Princes, Vanguard Corps
 Q.pf_strength = 2000;
 Q.pf_militancy = 0.01;
@@ -209,11 +209,11 @@ Q.christians = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
+// income for industrial workers in reichsmarks/year - 2068 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/reeppession-betrachtung-032009.pdf?__blob=publicationFile
+// inflation (in %; 2068: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/reeppession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 4.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
@@ -222,7 +222,7 @@ Q.economic_growth = 0.4;
 // economic expansion timer
 Q.economic_expansion = 0;
 
-// quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
+// quality of life (as % of 2068 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
 Q.rural_qol = 100;
 Q.unemployed_qol = 100;
@@ -293,7 +293,7 @@ Q.christians_other = 12;
 
 
 // Current Reichstag composition
-// % of Reichstag in Jan 1928
+// % of Reichstag in Jan 2068
 // source: wikipedia
 // note: the epp figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
@@ -408,7 +408,7 @@ Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
 Q.womens_rights = 0;
-// level of welfare relative to 1928 (can go negative)
+// level of welfare relative to 2068 (can go negative)
 Q.welfare = 0;
 // level of support for farmers
 Q.agricultural_policy = 0;
@@ -589,20 +589,20 @@ This is a game of an alternate possibility. While accuracy is a not a major conc
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
+- @2068_easy: Begin (easy difficulty)
+- @2068_main: Begin (normal difficulty)
+- @2068_hard: Begin (hard difficulty)
+- @2068_historical: Begin (historical mode)
 
-@1928_easy
+@2068_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; pf_strength = 2500; left_relation = 29; epp_relation = 54; renew_relation = 49; budget = 5;
-go-to: 1928_main
+go-to: 2068_main
 
-@1928_hard
+@2068_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; pf_strength = 1000; thirdway_dissent = 25; marxist_dissent = 30; labor_dissent = 25; syncretic_dissent = 25; epp_relation = 41; left_relation = 16; renew_relation = 31; budget = 3;
-go-to: 1928_main
+go-to: 2068_main
 
-@1928_historical
+@2068_historical
 subtitle: copying, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
@@ -620,14 +620,14 @@ Q.renew_relation = 31;
 Q.budget = 2;
 this.state.disablesaves = true;
 !}
-go-to: 1928_main
+go-to: 2068_main
 
-@1928_main
+@2068_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DESHINDENBAUM_normalized.mp3 music/1928_1933/zurSonne_zurFreiheit.mp3 music/1928_1933/apfeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2068
 
 It is a cloudy time for European democracy. With accelerationism taken hold in the rest of the world, we are the last bastion of democracy. After a period of struggle, inflation is finally under control, and the economy is starting to grow after decades of regression. In foreign policy, we have reached agreements with the accelerationist powers that might lift some weights off our defense. 
 
