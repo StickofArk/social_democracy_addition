@@ -6,7 +6,7 @@ on-arrival: hindenburg_dead = 1
 max-visits: 1
 tags: event
 face-image: img/Hindenburg_head.jpg
-go-to: game_over_1934
+go-to: game_over_2074
 
 = The Death of Hindenburg
 
