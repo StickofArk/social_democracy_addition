@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Social Democracy: An Accelerationist Apocalypse
 
 @start_menu_2
 
@@ -21,12 +21,12 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 2068;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
-// 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
+// 0 = normal difficulty, 1 = hard mode, 2 = hard mode no cspves
 Q.difficulty = 0;
 Q.historical_mode = 0;
 // old demographics
@@ -46,27 +46,27 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
-// should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
+Q.factions = ['marxist', 'labor', 'syncretic', 'thirdway', 'conservative'];
+// should this be normaliepped to 100%?
+Q.marxist_strength = 15;
+Q.marxist_dissent = 20;
+Q.syncretic_strength = 30;
+Q.syncretic_dissent = 0;
 Q.labor_strength = 25;
 Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.thirdway_strength = 25;
+Q.thirdway_dissent = 5;
+Q.conservative_strength = 5;
+Q.conservative_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
+Q.marxist_split = 0;
+Q.thirdways_resigned = 0;
 
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
+// have we discovered syncretism?
+Q.syncretic = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -101,21 +101,21 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.epp_relation = 40;
+Q.left_relation = 35;
+Q.green_relation = 60;
+Q.renew_relation = 35;
+// ESN and ACC are invariably hostile
+Q.esn_relation = 10;
+Q.acc_relation = 0;
 
-Q.kpd_leader = "Thälmann";
+Q.left_leader = "Thälmann";
 // alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
+Q.left_party_leader = "Thälmann";
+Q.epp_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+Q.epp_party_leader = "Marx";
+Q.acc_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -125,41 +125,41 @@ Q.hindenburg_enabled = 0;
 
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+// Options: spd, epp, esn, papen, acc
+Q.european_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
-Q.women_in_rb = 0;
-Q.rb_banned = 0;
-Q.sh_strength = 500;
-Q.sh_militancy = 0.5;
-Q.sh_banned = 0;
-Q.sh_banned_prussia = 0;
-Q.sa_strength = 80;
-Q.sa_militancy = 0.5;
-Q.sa_banned = 0;
-Q.sa_banned_prussia = 0;
-Q.rfb_strength = 130;
-Q.rfb_militancy = 0.5;
-Q.rfb_banned = 0;
-Q.rfb_banned_prussia = 0;
+// Popular Front, Restoration League, Court of the Seven Princes, Vanguard Corps
+Q.pf_strength = 2000;
+Q.pf_militancy = 0.01;
+Q.women_in_pf = 0;
+Q.pf_banned = 0;
+Q.rl_strength = 500;
+Q.rl_militancy = 0.5;
+Q.rl_banned = 0;
+Q.rl_banned_prussia = 0;
+Q.csp_strength = 80;
+Q.csp_militancy = 0.5;
+Q.csp_banned = 0;
+Q.csp_banned_prussia = 0;
+Q.vc_strength = 130;
+Q.vc_militancy = 0.5;
+Q.vc_banned = 0;
+Q.vc_banned_prussia = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
+Q.european_police_strength = 90;
+Q.european_police_militancy = 1;
+Q.european_police_loyalty = 0.5;
 
 // strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
-Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.army_strength = 100;
+Q.army_militancy = 5;
+Q.army_loyalty = 0.2;
 
 // The state of the country
 
@@ -171,6 +171,8 @@ Q.nationalism = 60;
 Q.socialism = 40;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
+// accelerationism vs status-quo
+Q.accelerationism = 5;
 
 Q.emergency_rule = 0;
 
@@ -184,15 +186,15 @@ Q.constructive_vonc = 0;
 Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
-Q.kpd_banned = 0;
-Q.nsdap_banned = 0;
+Q.left_banned = 0;
+Q.acc_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 4;
+Q.budget = 6;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
@@ -203,7 +205,7 @@ Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.christians = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -211,11 +213,11 @@ Q.catholics = 30;
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
+// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/reeppession-betrachtung-032009.pdf?__blob=publicationFile
+Q.inflation = 4.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
+Q.economic_growth = 0.4;
 
 // economic expansion timer
 Q.economic_expansion = 0;
@@ -227,102 +229,102 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'christians'];
+Q.parties = ['spd', 'left', 'epp', 'green', 'renew', 'esn', 'acc', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
+// they don't have to sum to 100 since the electoral calculations will be normaliepped.
+Q.workers_spd = 55;
+Q.workers_left = 20;
+Q.workers_epp = 5;
+Q.workers_green = 0;
+Q.workers_renew = 0;
+Q.workers_esn = 5;
+Q.workers_acc = 5;
 Q.workers_other = 10;
 
 Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
+Q.old_middle_left = 0;
+Q.old_middle_epp = 5;
+Q.old_middle_green= 10;
+Q.old_middle_renew = 25;
+Q.old_middle_esn = 25;
+Q.old_middle_acc = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
+Q.new_middle_left = 1;
+Q.new_middle_epp = 10;
+Q.new_middle_green= 25;
+Q.new_middle_renew = 25;
+Q.new_middle_esn = 10;
+Q.new_middle_acc = 5;
 Q.new_middle_other = 15;
 
 Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
+Q.rural_left = 0;
+Q.rural_epp = 5;
+Q.rural_green= 5;
+Q.rural_renew = 15;
+Q.rural_esn = 45;
+Q.rural_acc = 5;
 Q.rural_other = 10;
 
 Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
+Q.unemployed_left = 55;
+Q.unemployed_epp = 1;
+Q.unemployed_green = 0;
+Q.unemployed_renew = 0;
+Q.unemployed_esn = 5;
+Q.unemployed_acc = 15;
 Q.unemployed_other = 9;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.christians_spd = 15;
+Q.christians_left = 2;
+Q.christians_epp = 50;
+Q.christians_green = 0;
+Q.christians_renew = 5;
+Q.christians_esn = 5;
+Q.christians_acc = 0;
+Q.christians_other = 12;
 
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
 // source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
+// note: the epp figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
+Q.left_r = 9;
+Q.epp_r = 17;
+Q.green_r = 6;
+Q.renew_r = 10;
+Q.esn_r = 20;
+Q.acc_r = 3;
 Q.other_r = 9;
 
 // diff from prev
 Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
+Q.old_left_r = 9;
+Q.old_epp_r = 17;
+Q.old_green_r = 6;
+Q.old_renew_r = 10;
+Q.old_esn_r = 20;
+Q.old_acc_r = 3;
 Q.old_other_r = 9;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
+// for changing the green's name to the DStP
+Q.green_name = "green";
 
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
+// array of objects of the form {date: Date(), spd: 10, left: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -334,25 +336,25 @@ Q.economic_records = [];
 Q.president = "Hindenburg";
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
+Q.chancellor_party = 'epp';
 Q.spd_in_government = 0;
-Q.z_in_government = 1;
-Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
-Q.nsdap_in_government = 0;
+Q.epp_in_government = 1;
+Q.green_in_government = 0;
+Q.renew_in_government = 1;
+Q.esn_in_government = 1;
+Q.left_in_government = 0;
+Q.acc_in_government = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
+// Weimar coalition = SPD + epp + green
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
+// Grand coalition = SPD + epp + BVP + green + renew
+// also includes the "new grand coalition" of SPD + epp + BVP + green + renew + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
+// Popular front = SPD + left + epp + green
 Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
+// marxist coalition = SPD + left + marxist-splinters
+Q.in_marxist_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
@@ -363,8 +365,8 @@ Q.in_minority_government = 0;
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
+// dissent from the left, in a popular front or marxist front government
+Q.left_coalition_dissent = 0;
 
 // does the SPD tolerate the government even if it is not a participant?
 Q.spd_toleration = 0;
@@ -376,21 +378,21 @@ Q.minority_government = 0;
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
+Q.foreign_minister_party = 'renew';
 Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
+Q.interior_minister_party = 'esn';
 Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
+Q.justice_minister_party = 'esn';
 Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
+Q.labor_minister_party = 'epp';
+Q.army_minister = 'Groener';
+Q.army_minister_party = 'I';
 Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
+Q.economic_minister_party = 'renew';
 Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
+Q.finance_minister_party = 'epp';
 Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.agriculture_minister_party = 'esn';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
@@ -414,18 +416,18 @@ Q.land_reform = 0;
 // works-creation programs (i.e. WTB-plan) - how much have they implemented?
 Q.works_program = 0;
 Q.wtb_implemented = 0;
-// Relations with the Western countries (France, UK).
+// Relations with the Western countries (USA, Brazil).
 Q.west_relation = 0;
-// Relations with the Eastern countries (Poland, Czechoslovakia)
+// Relations with the Eastern countries (China)
 Q.east_relation = 0;
-// Relations with the Soviet Union
-Q.soviet_relation = 0;
+// Relations with the Arabs
+Q.arab_relation = 0;
 // How much have we exposed the secret rearmament programs?
 Q.rearmament_exposed = 0;
 // reparations vs baseline: young plan is -1.
 Q.reparations = 0;
 Q.reparations_negotiation = 0;
-// nationalization_progress is part of the left economic plan.
+// nationalization_progress is part of the marxist economic plan.
 Q.nationalization_progress = 0;
 // socializations is part of the economic democracy card.
 Q.socializations = 0;
@@ -434,7 +436,7 @@ Q.nationalize_budget = 4;
 Q.factory_takeovers = 0;
 // progress on the moderate economic plan
 Q.moderate_plan_progress = 0;
-// European Union negotiation process
+// European Union federalization process
 Q.eu = 0;
 Q.eu_progress = 0;
 // science/education
@@ -469,7 +471,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
-            'police', 'prussian_affairs', 'shuffle_cabinet', 'social_welfare',
+            'police', 'european_affairs', 'shuffle_cabinet', 'social_welfare',
             'homosexual_rights', 'economic_policy', 'coalition_affairs',
             'war_guilt', 'womens_rights', 'economic_democracy',
             'dealing_with_toleration',
@@ -477,8 +479,8 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'education_science', 'curriculum',
             // events
             'emergency_cuts', 'unemployment_insurance',
-            'sa_ban', 'sh_ban', 'papen_chancellor',
-            'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
+            'csp_ban', 'rl_ban', 'papen_chancellor',
+            'left_policy', 'left_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes'];
 Q.advisor_action_timer = 0;
@@ -517,7 +519,7 @@ Q.judiciary_timer = 0;
 Q.labor_affairs_timer = 0;
 Q.military_policy_timer = 0;
 Q.police_timer = 0;
-Q.prussian_affairs_timer = 0;
+Q.european_affairs_timer = 0;
 Q.shuffle_cabinet_timer = 0;
 Q.social_welfare_timer = 0;
 Q.war_guilt_timer = 0;
@@ -528,9 +530,9 @@ Q.coalition_affairs_timer = 0;
 // event timers
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
-Q.sa_ban_timer = 0;
-Q.sh_ban_timer = 0;
-Q.kpd_ultimatum_timer = 0;
+Q.csp_ban_timer = 0;
+Q.rl_ban_timer = 0;
+Q.left_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
 
@@ -538,22 +540,22 @@ Q.march_on_berlin_timer = 0;
 Q.wels_advisor = 1; // Otto Wels
 Q.muller_advisor = 1; // Hermann Müller
 Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
+// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him... Except that he was a close friend of Luxemburg and co-led the USPD????? (What am I writing, I'll be deleting all of these leaders for new guys)
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 1; // Rudolf Hilferding
 
-// left advisors
+// marxist advisors
 Q.sender_advisor = 0; // Toni Sender
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
 Q.seydewitz_advisor = 0; // Max Seydewitz
 
-// centrist alternate advisors
+// syncretic alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
-// Reformist advisors
+// thirdway advisors
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacz_advisor = 0; // Marie Juchacz
@@ -565,7 +567,7 @@ Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 Q.wissell_advisor = 0; // Rudolf Wissell
 
-// Revisionist advisors
+// Conservative advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
 
 Q.leber_advisor = 0; // Julius Leber (post-1930)
@@ -583,7 +585,7 @@ new-page: true
 
  - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of an alternate possibility. While accuracy is a not a major concern, keep in mind that this is a *game*, and that any divergence from future events will neccessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
@@ -593,41 +595,41 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; pf_strength = 2500; left_relation = 29; epp_relation = 54; renew_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; pf_strength = 1000; thirdway_dissent = 25; marxist_dissent = 30; labor_dissent = 25; syncretic_dissent = 25; epp_relation = 41; left_relation = 16; renew_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
+subtitle: copying, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
-Q.rb_strength = 2000;
-Q.reformist_dissent = 25;
-Q.left_dissent = 30;
+Q.pf_strength = 2000;
+Q.thirdway_dissent = 25;
+Q.marxist_dissent = 30;
 Q.labor_dissent = 25;
-Q.center_dissent = 25;
-Q.z_relation = 41;
-Q.kpd_relation = 16;
-Q.dvp_relation = 31;
+Q.syncretic_dissent = 25;
+Q.epp_relation = 41;
+Q.left_relation = 16;
+Q.renew_relation = 31;
 Q.budget = 2;
-this.state.disableSaves = true;
+this.state.disablesaves = true;
 !}
 go-to: 1928_main
 
 @1928_main
-audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
+audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DESHINDENBAUM_normalized.mp3 music/1928_1933/zurSonne_zurFreiheit.mp3 music/1928_1933/apfeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a cloudy time for European democracy. With accelerationism taken hold in the rest of the world, we are the last bastion of democracy. After a period of struggle, inflation is finally under control, and the economy is starting to grow after decades of regression. In foreign policy, we have reached agreements with the accelerationist powers that might lift some weights off our defense. 
 
 Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
 
