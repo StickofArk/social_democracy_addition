@@ -80,7 +80,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Greens">!}[? if not green_name: The Greens?][? if green_name != 0 : [+ green_name +]?]{!</span>!}: [+ green_relation : relationships +]
 
-{!<span class="tooltip-text" title="Renew Europe">Renew</span>!}: [+ renew_relation : relationships +]
+{!<span class="tooltip-text" title="Renew Europe">RENEW</span>!}: [+ renew_relation : relationships +]
 
 {!<span class="tooltip-text" title="The Left">TL</span>!}: [+ left_relation : relationships +]
 
@@ -197,6 +197,12 @@ Support for Accelerationism: [+ accelerationism_disp +]%
 @degradation
 
 = Environment
+
+How the environment is holding out: {!<span class="tooltip-text" title="The Earth's Health">Climate Change</span>!}: dissent: [+ earth_dissent : dissent +]
+
+The chance a life ending meteor will hit the Earth: {!<span class="tooltip-text" title="The Seven Trumpets">Meteor Chance</span>!}: dissent: [+ meteor_dissent : dissent +]
+
+The possibility of war from the accelerationist superpowers: {!<span class="tooltip-text" title="The Unholy Trinity">WWIII</span>!}: dissent: [+ unholy_dissent : dissent +]
 
 #Defense 
 
