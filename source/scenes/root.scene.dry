@@ -443,7 +443,7 @@ Q.eu_progress = 0;
 Q.science = 0;
 Q.education_science = 0;
 
-// Tax rates relative to 1928 baseline
+// Tax rates relative to 2068 baseline
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
@@ -506,7 +506,7 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
+Q.next_election_year = 2068;
 Q.next_election_month = 5;
 Q.next_election_time = 5;
 // government affairs timers
