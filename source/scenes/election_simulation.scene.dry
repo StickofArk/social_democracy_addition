@@ -22,7 +22,7 @@ Q.parties = ['spd', 'left', 'epp', 'green', 'renew', 'esn', 'acc', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 65;
+Q.workers_spd = 60;
 Q.workers_left = 20;
 Q.workers_epp = 5;
 Q.workers_green = 0;
