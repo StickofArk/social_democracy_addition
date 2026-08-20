@@ -18,7 +18,6 @@ max-cards: 3
 
 - @party
 - @govt
-- @terrors
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -42,7 +41,6 @@ max-cards: 4
 
 - @party
 - @govt
-- @terrors
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -61,12 +59,4 @@ card-image: img/reichstag_2.jpg
 is-deck: true
 
 - #govt_affairs
-
-@terrors
-title: Terrors of the World
-card-image: img/Vorwaerts_nr_1.png
-is-deck: true
-
-- #terrors_affairs
-
 
