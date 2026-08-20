@@ -192,17 +192,22 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, EPP: [+ unemployed_epp_display +
 Catholics: SPD: [+ catholics_spd_display +]%, EPP: [+ catholics_epp_display +]%, Left: [+ catholics_left_display +]%, [? if not green_name: green?][? if green_name != 0 : [+ green_name +]?]: [+ catholics_green_display +]%, Renew: [+ catholics_renew_display +]%; ESN: [+ catholics_esn_display +]%, ACC: [+ catholics_acc_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
-Support for Accelerationism: [+ accelerationism_disp +]%
 
 @degradation
 
-= Environment
+= The Seven Deadly Sins
 
-How the environment is holding out: {!<span class="tooltip-text" title="The Earth's Health">Climate Change</span>!}: dissent: [+ earth_dissent : dissent +]
+The possibility of {!<span class="tooltip-text" title="Wrath">WWIII</span>!} from the Unholy Trinity: [+ unholy_dissent : dissent +]
 
-The chance a life ending meteor will hit the Earth: {!<span class="tooltip-text" title="The Seven Trumpets">Meteor Chance</span>!}: dissent: [+ meteor_dissent : dissent +]
+Support for {!<span class="tooltip-text" title="Lust.">Acclerationism</span>!}: [+ accelerationism_disp +]%
 
-The possibility of war from the accelerationist superpowers: {!<span class="tooltip-text" title="The Unholy Trinity">WWIII</span>!}: dissent: [+ unholy_dissent : dissent +]
+The chance the Seventh Trumpet will {!<span class="tooltip-text" title="Sloth">hit</span>!} the Earth: [+ meteor_dissent : dissent +]
+
+How the {!<span class="tooltip-text" title="Greed">environment</span>!} is holding out: [+ earth_dissent : dissent +]
+
+
+
+
 
 #Defense 
 
