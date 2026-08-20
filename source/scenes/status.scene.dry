@@ -152,7 +152,6 @@ on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
-Q.accelerationism_disp = (Q.accelerationism);
 !}
 
 = Projected election results
@@ -198,6 +197,8 @@ Support for the Republic: [+ pro_republic_disp +]%
 = The Seven Deadly Sins
 
 The possibility of {!<span class="tooltip-text" title="Wrath">WWIII</span>!} from the Unholy Trinity: [+ unholy_dissent : dissent +]
+
+Q.accelerationism_disp = (Q.accelerationism);
 
 Support for {!<span class="tooltip-text" title="Lust.">Accelerationism</span>!}: [+ accelerationism_disp +]%
 
