@@ -3,6 +3,7 @@ new-page: true
 on-arrival: {!
 Q.last_advisor_action = 0;
 Q.last_cabinet_action = 0;
+Q.accelerationism += 1;
 // make sure no stat is below 0.
 for (var c of Q.classes) {
     for (var party of Q.parties) {
@@ -103,7 +104,6 @@ if (Q.month_actions >= 1) {
     Q.time += 1;
     Q.month_actions = 0;
     Q.month += 1;
-    Q.accelerationism += 1;
     if (Q.month >= 13) {
         Q.month = 1;
         Q.year += 1;
