@@ -18,7 +18,8 @@ Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);
 
 if Q.accelerationism = accelerationism {
-accelerationism += 1; Q.accelerationism = Math.round(Q.accelerationism);
+    accelerationism += 1;
+    Q.accelerationism = Math.round(Q.accelerationism);
 }
 
 if (Q.pro_republic < 0) {
