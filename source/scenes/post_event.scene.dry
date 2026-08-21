@@ -3,7 +3,7 @@ new-page: true
 on-arrival: {!
 Q.last_advisor_action = 0;
 Q.last_cabinet_action = 0;
-Q.accelerationism += 1;
+accelerationism += 1;
 // make sure no stat is below 0.
 for (var c of Q.classes) {
     for (var party of Q.parties) {
