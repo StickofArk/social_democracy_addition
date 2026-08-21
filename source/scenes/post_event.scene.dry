@@ -3,7 +3,7 @@ new-page: true
 on-arrival: {!
 Q.last_advisor_action = 0;
 Q.last_cabinet_action = 0;
-accelerationism += 1;
+
 // make sure no stat is below 0.
 for (var c of Q.classes) {
     for (var party of Q.parties) {
@@ -16,6 +16,9 @@ for (var c of Q.classes) {
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);
+Q.accelerationism = Math.round(Q.accelerationism)
+
+accelerationism += 1;
 
 if (Q.pro_republic < 0) {
     Q.pro_republic = 0;
