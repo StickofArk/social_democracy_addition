@@ -101,7 +101,7 @@ if (Q.dissent < 0) {
 // 1. update dates
 if (Q.month_actions >= 1) {
     Q.time += 1;
-    Q.accelerationism = (Q.accelerationism || 0) + 5;
+    Q.accelerationism = (Q.accelerationism || 0) + 1;
     Q.month_actions = 0;
     Q.month += 1;
     if (Q.month >= 13) {
