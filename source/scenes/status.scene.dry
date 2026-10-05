@@ -209,7 +209,7 @@ The desire for {!<span class="tooltip-text" title="Greed">power</span>!} among t
 
 How much {!<span class="tooltip-text" title="Pride">control</span>!} we have over our own party: [+ centralization_dissent : dissent +] 
 
-The consequences of being {!<span class="tooltip-text" title="Envy">successful</span>!} and resilient: [relations_dissent : dissent +]
+The consequences of being {!<span class="tooltip-text" title="Envy">successful</span>!} and resilient: [+ relations_dissent : dissent +]%
 
 
 
