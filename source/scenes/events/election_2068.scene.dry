@@ -209,7 +209,7 @@ data = data.concat([
     {
         "id": "green",
         "legend": Q.ddp_name,
-        "name": Q.ddp_name,
+        "name": "Greens",
         "seats": Math.round(Q.green_r*5),
     },
     {
@@ -279,21 +279,21 @@ go-to: coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#E42728'> </div> !}KPD: {!</td><td>!} [+ left_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E42728'> </div> !}Left: {!</td><td>!} [+ left_r +]% {!</td><td>!} [+ str_change_left +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#57B45F'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ green_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#57B45F'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ green_r +]% {!</td><td>!} [+ str_change_green +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3399FF'> </div> !} Z: {!</td><td>!} [+ epp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3399FF'> </div> !} EPP: {!</td><td>!} [+ epp_r +]% {!</td><td>!} [+ str_change_epp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} DVP: {!</td><td>!} [+ renew_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} RENEW: {!</td><td>!} [+ renew_r +]% {!</td><td>!} [+ str_change_renew +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#13517E'> </div> !} DNVP: {!</td><td>!} [+ esn_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#13517E'> </div> !} ESN: {!</td><td>!} [+ esn_r +]% {!</td><td>!} [+ str_change_esn +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ acc_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} ACC: {!</td><td>!} [+ acc_r +]% {!</td><td>!} [+ str_change_acc +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
