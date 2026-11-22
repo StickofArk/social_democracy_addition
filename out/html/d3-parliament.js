@@ -2,12 +2,13 @@
  * MIT License
  * © Copyright 2016 - Geoffrey Brossard (me@geoffreybrossard.fr)
  */
-
 d3.parliament = function() {
     /* params */
     var width,
         height,
-        innerRadiusCoef = 0.4;
+        innerRadiusCoef = 0.4,
+        arcSpan = 1.5 * Math.PI,
+        startAngle = -Math.PI / 2 - arcSpan / 2;
 
     /* animations */
     var enter = {
@@ -33,9 +34,9 @@ d3.parliament = function() {
 
             // if user did not provide, fill the svg:
             width = width ? width : this.getBoundingClientRect().width;
-            height = width ? width / 2 : this.getBoundingClientRect().width/2;
+            height = height ? height: this.getBoundingClientRect().height;
 
-            var outerParliamentRadius = Math.min(width/2, height);
+            var outerParliamentRadius = Math.min(width/2, height/2);
             var innerParliementRadius = outerParliamentRadius * innerRadiusCoef;
 
             /* init the svg */
@@ -57,7 +58,7 @@ d3.parliament = function() {
                     /* NOTE: the number of seats available in each row depends on the total number
                     of rows and floor() is needed because a row can only contain entire seats. So,
                     it is not possible to increment the total number of seats adding a row. */
-                    maxSeatNumber = series(function(i) { return Math.floor(Math.PI * (b + i)); }, nRows-1);
+                    maxSeatNumber = series(function(i) { return Math.floor(arcSpan * (b + i)); }, nRows-1);
                 }
             })();
 
@@ -71,13 +72,13 @@ d3.parliament = function() {
                 var seatsToRemove = maxSeatNumber - nSeats;
                 for (var i = 0; i < nRows; i++) {
                     var rowRadius = innerParliementRadius + rowWidth * (i + 0.5);
-                    var rowSeats = Math.floor(Math.PI * (b + i)) - Math.floor(seatsToRemove / nRows) - (seatsToRemove % nRows > i ? 1 : 0);
-                    var anglePerSeat = Math.PI / rowSeats;
+                    var rowSeats = Math.floor(arcSpan * (b + i)) - Math.floor(seatsToRemove / nRows) - (seatsToRemove % nRows > i ? 1 : 0);
+                    var anglePerSeat = arcSpan / rowSeats;
                     for (var j = 0; j < rowSeats; j++) {
                         var s = {};
                         s.polar = {
                             r: rowRadius,
-                            teta: -Math.PI + anglePerSeat * (j + 0.5)
+                            teta: startAngle + anglePerSeat * (j + 0.5)
                         };
                         s.cartesian = {
                             x: s.polar.r * Math.cos(s.polar.teta),
@@ -213,6 +214,7 @@ d3.parliament = function() {
     /** Deprecated since v1.0.1 */
     parliament.height = function(value) {
         if (!arguments.length) return height;
+        height = value;
         return parliament;
     };
 
@@ -221,7 +223,16 @@ d3.parliament = function() {
         innerRadiusCoef = value;
         return parliament;
     };
-
+    parliament.arcSpan = function(value) {
+        if (!arguments.length) return arcSpan;
+        arcSpan = value;
+        return parliament;
+    };
+    parliament.startAngle = function(value) {
+        if (!arguments.length) return startAngle;
+        startAngle = value;
+        return parliament;
+    };
     parliament.enter = {
         smallToBig: function (value) {
             if (!arguments.length) return enter.smallToBig;
