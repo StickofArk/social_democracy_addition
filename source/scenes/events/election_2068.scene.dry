@@ -208,7 +208,7 @@ data = data.concat([
     },
     {
         "id": "green",
-        "legend": Q.ddp_name,
+        "legend": "Greens",
         "name": "Greens",
         "seats": Math.round(Q.green_r*5),
     },
@@ -281,11 +281,11 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#E42728'> </div> !}Left: {!</td><td>!} [+ left_r +]% {!</td><td>!} [+ str_change_left +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#57B45F'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ green_r +]% {!</td><td>!} [+ str_change_green +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#57B45F'> </div> !} Greens: {!</td><td>!} [+ green_r +]% {!</td><td>!} [+ str_change_green +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3399FF'> </div> !} EPP: {!</td><td>!} [+ epp_r +]% {!</td><td>!} [+ str_change_epp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} RENEW: {!</td><td>!} [+ renew_r +]% {!</td><td>!} [+ str_change_renew +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} Renew: {!</td><td>!} [+ renew_r +]% {!</td><td>!} [+ str_change_renew +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
