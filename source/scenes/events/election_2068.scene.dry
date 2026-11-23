@@ -99,8 +99,8 @@ if (Q.left_r >= Q.spd_r && Q.left_r >= Q.acc_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.green_r + Q.epp_r - 3;
-Q.grand_coalition = Q.spd_r + Q.epp_r;
+Q.weimar_coalition = Q.spd_r + Q.green_r + Q.epp_r;
+Q.grand_coalition = Q.spd_r + Q.epp_r + Q.green_r + Q.renew_r;
 Q.bourgeois_coalition = Q.green_r + Q.epp_r + Q.renew_r + Q.other_r;
 Q.center_right_coalition = Q.epp_r + Q.green_r + Q.renew_r + Q.other_r + Q.esn_r;
 Q.right_coalition = Q.epp_r + Q.renew_r + Q.other_r + Q.esn_r;
@@ -284,11 +284,11 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+Weimar Coalition (SPD + Z + Greens): [+ weimar_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Grand Coalition (SPD + Z + Greens + DVP): [+ grand_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
+Bourgeois Coalition (Z + BVP + Greens + DVP + Others): [+ bourgeois_coalition +]%
 
 Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
 
@@ -935,7 +935,7 @@ Rudolf Breitscheid has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: S&D + EPP ([+ grand_coalition +]%)
+subtitle: S&D + EPP + Greens + Renew ([+ grand_coalition +]%)
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
 go-to: grand_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and ((n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
 
