@@ -213,22 +213,16 @@ data = data.concat([
         "seats": Math.round(Q.green_r*10),
     },
     {
-        "id": "epp",
-        "legend": "EPP",
-        "name": "EPP",
-        "seats": Math.round(Q.epp_r*10),
-    },
-    {
         "id": "renew",
         "legend": "Renew",
         "name": "Renew",
         "seats": Math.round(Q.renew_r*10),
     },
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*10),
+        "id": "epp",
+        "legend": "EPP",
+        "name": "EPP",
+        "seats": Math.round(Q.epp_r*10),
     },
     {
         "id": "ESN",
