@@ -238,22 +238,22 @@ Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 55;
+Q.workers_spd = 45;
 Q.workers_left = 20;
-Q.workers_epp = 5;
+Q.workers_epp = 10;
 Q.workers_green = 0;
 Q.workers_renew = 0;
-Q.workers_esn = 5;
+Q.workers_esn = 15;
 Q.workers_acc = 5;
-Q.workers_other = 10;
+Q.workers_other = 5;
 
 Q.old_middle_spd = 5;
 Q.old_middle_left = 0;
-Q.old_middle_epp = 5;
+Q.old_middle_epp = 10;
 Q.old_middle_green= 10;
 Q.old_middle_renew = 25;
 Q.old_middle_esn = 25;
-Q.old_middle_acc = 10;
+Q.old_middle_acc = 5;
 Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
@@ -267,27 +267,27 @@ Q.new_middle_other = 15;
 
 Q.rural_spd = 10;
 Q.rural_left = 0;
-Q.rural_epp = 5;
+Q.rural_epp = 15;
 Q.rural_green= 5;
 Q.rural_renew = 15;
-Q.rural_esn = 45;
+Q.rural_esn = 40;
 Q.rural_acc = 5;
-Q.rural_other = 10;
+Q.rural_other = 5;
 
-Q.unemployed_spd = 25;
+Q.unemployed_spd = 15;
 Q.unemployed_left = 55;
-Q.unemployed_epp = 1;
+Q.unemployed_epp = 11;
 Q.unemployed_green = 0;
 Q.unemployed_renew = 0;
 Q.unemployed_esn = 5;
 Q.unemployed_acc = 15;
 Q.unemployed_other = 9;
 
-Q.christians_spd = 15;
+Q.christians_spd = 10;
 Q.christians_left = 2;
 Q.christians_epp = 50;
 Q.christians_green = 0;
-Q.christians_renew = 5;
+Q.christians_renew = 10;
 Q.christians_esn = 5;
 Q.christians_acc = 0;
 Q.christians_other = 12;
@@ -349,7 +349,7 @@ Q.acc_in_government = 0;
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + epp + green
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + epp + BVP + green + renew
+// Grand coalition = SPD + EPP
 // also includes the "new grand coalition" of SPD + epp + BVP + green + renew + Others
 Q.in_grand_coalition = 0;
 // Popular front = SPD + left + epp + green
