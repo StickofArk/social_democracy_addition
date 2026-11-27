@@ -186,7 +186,7 @@ if (Q.month_actions >= 1) {
         Q.economic_growth -= 0.3;
     }
     if (Q.delegate >= 1){
-    if (Q.month == 2 || Q.month == 4 || Q.month == 6 || Q.month == 8 || Q.month = 10 || Q.month = 12){
+    if (Q.month == 2 || Q.month == 4 || Q.month == 6 || Q.month == 8 || Q.month == 10 || Q.month == 12){
     Q.resources += 1;
     }
     }
