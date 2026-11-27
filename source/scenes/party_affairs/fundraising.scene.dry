@@ -42,6 +42,6 @@ Our members grumble at this, and some of the less committed members leave. But n
 subtitle: [+ dues +] resources gained.
 on-arrival: resources += dues; girondins_dissent -= 5; regulatonists_dissent -= 5; neodemocrat_dissent -= 5; leftcons_dissent -= 5; redistributor_dissent -= 5; fundraising_timer = 30; delegate +=1
 
-Our decision pleases the party, but we lose access to fundraise ourselves.
+Our decision pleases the party, which allows us to gain a resource after we are done making our decisions. 
 
 
