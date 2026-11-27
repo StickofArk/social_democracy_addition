@@ -1,0 +1,86 @@
+title: Leadership Elections of the S&D
+new-page: true
+subtitle: The elections of the Socialists and Democrats, deciding the course of the party.
+tags: event
+view-if: year == 2069 and month == 1
+max-visits: 1
+
+= Leadership Electtions of the S&D
+
+The party will finally hold elections. One of the factions will take control, but whom?
+  
+- @elections: Let's see the results, then.
+- @noelections: How about we don't.
+
+@elections
+on-arrival: resources += 1
+
+The results are in.
+- @girondinsvictory: The Girondins Win!
+- @neodemocratvictory: The Neodemocrats Win!
+- @redistributorvictory: The Redistributors Win!
+- @regulationistvictory: The Regulationists Win!
+- @leftconsvictory: The Left Conservatives Win!
+
+@girondinsvictory  
+choose-if: girondins_strength > neodemocrat_strength and girondins_strength > redistributor_strength and girondins_strength > regulationist_strength and girondins_strength > leftcons_strength
+
+The Girondins win! Meanwhile, the accelerationists send us a pretty obscure meme with a sentence on it. 
+- @ultraleftgirondins: We are no longer revolutionaries.
+  
+@ultraleftgirondins
+
+Brissot Unimpressed.
+
+@neodemocratvictory
+choose-if: neodemocrat_strength > girondins_strength and neodemocrat_strength > redistributor_strength and neodemocrat_strength > regulationist_strength and neodemocrat_strength > leftcons_strength
+
+The Neodemocrats win! A couple days later, the accelerationists send a weird.. meme. 
+- @ultraleftneodemocrats: You too, will become social democrats.
+
+@ultraleftneodemocrats  
+  
+Total Lassalle Victory, Indeed!
+
+@redistributorvictory
+choose-if: redistributor_strength > girondins_strength and redistributor_strength > neodemocrat_strength and redistributor_strength > regulationist_strength and redistributor_strength > leftcons_strength
+
+The Redistributors win! At that exact moment, the screen behind our new leader suddenly shows a new meme.
+- @ultraleftredistributor: Today, Social Democracy is Born.
+
+@ultraleftredistributor
+
+???
+
+@regulationistvictory
+choose-if: regulationist_strength > girondins_strength and regulationist_strength > neodemocrat_strength and regulationist_strength > redistributor_strength and regulationist_strength > leftcons_strength
+
+The regulationists win! After the celebrations calmed down, a hidden speaker suddenly spew out a random piece of dialogue.
+- @ultraleftregulationist: Our only doctrine is LARP!
+
+@ultraleftregulationist
+
+2 minutes later, our security guard was holding his belongings and promptly left the building.
+
+@leftconsvictory
+choose-if: leftcons_strength > girondins_strength and leftcons_strength > neodemocrat_strength and leftcons_strength > redistributor_strength and leftcons_strength > regulationist_strenth
+
+The left conservatives surprisingly win! After a day or two, the accelerationist leader proceeded to publish a short message about us on EuroTube, and it ended with...
+
+- @ultraleftleftcons: The Ridiculous Prevails...
+
+@ultraleftleftcons
+
+Can someone block those accelerationists already?!
+  
+@noelections
+choose-if:  year == 1933
+unavailable-subtitle: We're not a dictatorship.
+
+The Jewish capitalist world will not survive the twentieth century - Adolf Hitler. Ok haha you looked at the code, now stop cheating.
+
+
+@allow_no_police
+on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
+
+When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. Gunshots are heard, reportedly from rooftop snipers. In response, the SA engage the surrounding crowd and fire at the surrounding buildings. Dozens are killed, mostly civilians. The Nazis recruit off their dead martyrs.
