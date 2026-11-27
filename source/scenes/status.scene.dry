@@ -90,13 +90,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Marxists are interested in radical, transformative policies and cooperation with the Left.">Marxist</span>!} strength: [+ marxist_strength : strength +], dissent: [+ marxist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Girondins want radical republican policies and wish to reunite us with the Left.">Girondins!} strength: [+ girondins_strength : strength +], dissent: [+ girondins_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Third Way stands as an inbetween Marxism-Leninism and Free-Market Capitalism.">ThirdWay</span>!} strength: [+ thirdway_strength : strength +], dissent: [+ thirdway_dissent : dissent +]
+{!<span class="tooltip-text" title="The Neodemocrats wish to empower economic democracy, and are inspired off of the liberals and their success at political democracy.">Neodemocrats</span>!} strength: [+ neodemocrat_strength : strength +], dissent: [+ neodemocrat_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="Redistributors want to redistribute the wealth of the 1% into the poor, until the rich cannot corrupt Europa with cash and capital.">Redistributor</span>!} strength: [+ redistributor_strength : strength +], dissent: [+ redistributor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Conservatives hail from Eastern Europe, attempting to merge center-left economics with center-right culture.">Conservative</span>!} strength: [+ conservative_strength : strength +], dissent: [+ conservative_dissent : dissent +]
+{!<span class="tooltip-text" title="Unlike most Social Democrats, the regulationists want to regulate the economy so that people can still live their lives within the system without worrying about the flaws of capitalism.">Regulationist</span>!} strength: [+ regulationist_strength : strength +], dissent: [+ regulationist_dissent : dissent +]
+
+{!<span class="tooltip-text" title="The Left Conservatives hail from Eastern Europe, attempting to merge left-wing economics with right-wing culture. Paradoxically, they seem to be the most interested in the Chongqing Model of our accelerationist enemies">LeftCons</span>!} strength: [+ leftcons_strength : strength +], dissent: [+ leftcons_dissent : dissent +]
 
 [? if syncretic > 0 : Syncretics strength: [+ syncretic_strength : strength +], dissent: [+ syncretic_dissent : dissent +] ?]
 
@@ -192,24 +194,25 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, EPP: [+ unemployed_epp_display +
 Catholics: SPD: [+ catholics_spd_display +]%, EPP: [+ catholics_epp_display +]%, Left: [+ catholics_left_display +]%, [? if not green_name: green?][? if green_name != 0 : [+ green_name +]?]: [+ catholics_green_display +]%, Renew: [+ catholics_renew_display +]%; ESN: [+ catholics_esn_display +]%, ACC: [+ catholics_acc_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
+Support for Accelerationism: [+ accelerationism_disp +]%
 
 @degradation
 
 = The Seven Deadly Sins
-
-The possibility of {!<span class="tooltip-text" title="Wrath">WWIII</span>!} from the Unholy Trinity: [+ unholy_dissent : dissent +]
+// Each sin corresponds with a trial once must face in order to protect Europa. Can you survive?
+Fervor of the World Powers to enact {!<span class="tooltip-text" title="Wrath">Accelerationist</span>!}: [+ unholy_dissent : dissent +]
 
 Support for {!<span class="tooltip-text" title="Lust.">Accelerationism</span>!}: [+ accelerationism +]%
 
-The chance the Seventh Trumpet will {!<span class="tooltip-text" title="Sloth">hit</span>!} the Earth: [+ meteor_dissent : dissent +]
+Strength of the 7th Trumpet to Decimate and {!<span class="tooltip-text" title="Sloth">Destroy</span>!}: [+ meteor_dissent : dissent +]
 
-How the {!<span class="tooltip-text" title="Gluttony">environment</span>!} is holding out: [+ earth_dissent : dissent +]
+How our Environment is doing against Man's {!<span class="tooltip-text" title="Gluttony">Hunger</span>!}: [+ earth_dissent : dissent +]
 
-The desire for {!<span class="tooltip-text" title="Greed">power</span>!} among the masses: [+ material_dissent : dissent +]
+The Power of Reactionaries in Their Pursuit of {!<span class="tooltip-text" title="Greed">Money</span>!}: [+ material_dissent : dissent +]
 
-How much {!<span class="tooltip-text" title="Pride">control</span>!} we have over our own party: [+ centralization_dissent : dissent +] 
+Amount of our party which is willing to {!<span class="tooltip-text" title="Pride">rebel</span>!}: [+ centralization_dissent : dissent +] 
 
-The consequences of being {!<span class="tooltip-text" title="Envy">successful</span>!} and resilient: [+ relations_dissent : dissent +]%
+Our Relations with Other Parties due to Our {!<span class="tooltip-text" title="Envy">Success</span>!}: [+ relations_dissent : dissent +]%
 
 
 
