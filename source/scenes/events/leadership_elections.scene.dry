@@ -67,7 +67,7 @@ The regulationists win! After the celebrations calmed down, a hidden speaker sud
 2 minutes later, our security guard was holding his belongings and promptly left the building.
 
 @leftconsvictory
-choose-if: leftcons_strength > girondins_strength and leftcons_strength > neodemocrat_strength and leftcons_strength > redistributor_strength and leftcons_strength > regulationist_strenth
+choose-if: leftcons_strength > girondins_strength and leftcons_strength > neodemocrat_strength and leftcons_strength > redistributor_strength and leftcons_strength > regulationist_strength
 
 The left conservatives surprisingly win! After a day or two, the accelerationist leader proceeded to publish a short message about us on EuroTube, and it ended with...
 
