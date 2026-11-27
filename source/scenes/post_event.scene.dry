@@ -185,7 +185,9 @@ if (Q.month_actions >= 1) {
     if (Q.economic_growth >= 12) {
         Q.economic_growth -= 0.3;
     }
-
+    if (Q.delegate >= 1){
+    Q.resources += 1;
+    }
     //////////////////////////////// Education & Science support/economic changes
     if (Q.major_curriculum && Q.major_curriculum == "democratic") {
         if (Q.pro_republic < 60) {
