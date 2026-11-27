@@ -185,7 +185,7 @@ if (Q.month_actions >= 1) {
     if (Q.economic_growth >= 12) {
         Q.economic_growth -= 0.3;
     }
-    if (Q.delegate >= 1){
+    if (Q.delegate >= 1 && Q.month % 2 == 0){
     Q.resources += 1;
     }
     //////////////////////////////// Education & Science support/economic changes
