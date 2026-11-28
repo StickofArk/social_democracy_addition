@@ -13,34 +13,36 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
-- @far_right: The far right - the NSDAP and DNVP.
-- @nsdap: The NSDAP alone.
-- @kpd: The KPD.
-- @bourgeois: The bourgeois parties - the Center and DVP.
+- @anti-democratic_parties: Everyone is our enemy, they've all been consumed by the accelerationists!
+- @far_right: The far right - ESN has prevented us from aiding the DSA government during their fight with accelerationism.
+- @acc: The Accelerationists alone.
+- @kpd: The Left.
+- @bourgeois: The center parties - EPP and Renew.
 - @easy_discard
 
-@anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
+@anti-democratic_parties
+choose-if: accelerationism >= 60
+unavailable_subtitle: Accelerationism hasn't taken hold... yet.
+on-arrival: enemies = "anti-democratic_parties"; girondins_strength -= 5; neodemocrat_strength -= 10; neodemocrat_dissent += 5; workers_left -= 2; workers_epp -= 2; workers_greens -= 2; workers_acc -= 5
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Attacking the accelerationists is popular among all but the neodemocrats of our party, who would prefer trying to save the formerly democratic parties from the accelerated. Our messaging seems to appeal to some workers, luckily.
 
 @far_right
-on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
+on-arrival: enemies = "far right"; neodemocrat_strength += 10; neodemocrat_dissent -= 5; workers_esn -= 4; rural_esn -= 4;
 
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+Attacking the far right is popular among the neodemocrats and the entire party, although the leftcons would prefer a more ambiguous tone, currently critical of our lack of response to the Left. Nevertheless, the popularity of the ESN takes a slight hit.
 
-@nsdap
-on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
+@acc
+on-arrival: enemies = "accelerationists"; nazi_urgency += 1; workers_acc -= 4;
 
-[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or nsdap_r < 10 : The ACC is a tiny party right now, with more bark than bite. Many don't question our decision, due to their domination over 5 continents. ?][? if nazi_urgency > 0 and acc_r >= 10 : The accelerationists are the most urgent problem for us to deal with. Europa must not fall ?]
 
-@kpd
-on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; z_relation += 5; workers_kpd -= 4;
+@left
+on-arrival: enemies = "Left"; regulationists_strength += 15; girondins_dissent += 8; regulationists_dissent -= 5; left_relation -= 15; renew_relation += 1; epp_relation += 3; workers_left -= 4;
 
-Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
+Attacking the Left is supported mostly by the regulationists, and wins us a meager amount of approval among the center parties. However, If we are to reconcile with the Left, we may have lost already. The Girondins are not happy with our decision.
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
+on-arrival: enemies = "center parties"; girondins_strength += 8; girondins_dissent -= 5; renew_relation -= 5; epp_relation -= 5; left_relation += 5; regulationist_dissent += 8; workers_epp -= 3; coalition_dissent += 1
 
-Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+Our anti-neoliberal rhetoric is popular among the girondins, but the regulationists and other parties are not thrilled at our message.
